@@ -43,12 +43,12 @@ TEMPLATES = [
 WSGI_APPLICATION = "core.wsgi.application"
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "postgres",
-        "USER": "postgres",
-        "PASSWORD": "postgres",
-        "HOST": os.environ.get("DB_HOST", "localhost"),
-        "PORT": "5432",
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('PGDATABASE'),
+        'USER': os.environ.get('PGUSER'),
+        'PASSWORD': os.environ.get('PGPASSWORD'),
+        'HOST': os.environ.get('PGHOST'),
+        'PORT': os.environ.get('PGPORT'),
     }
 }
 AUTH_PASSWORD_VALIDATORS = [
