@@ -6,7 +6,7 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "DEV123123123!+p0!qbb6clzyfe02%9kjnf1b=s^$59o@&07#1"
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['railwaydrfdeploy-production.up.railway.app', 'localhost']
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
