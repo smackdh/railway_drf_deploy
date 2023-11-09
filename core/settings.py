@@ -1,5 +1,7 @@
 from pathlib import Path
-
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "DEV123123123!+p0!qbb6clzyfe02%9kjnf1b=s^$59o@&07#1"
@@ -45,7 +47,7 @@ DATABASES = {
         "NAME": "postgres",
         "USER": "postgres",
         "PASSWORD": "postgres",
-        "HOST": "db",
+        "HOST": os.environ.get("DB_HOST", "localhost"),
         "PORT": "5432",
     }
 }
